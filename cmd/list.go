@@ -38,6 +38,19 @@ var listsLsCmd = &cobra.Command{
 	},
 }
 
+var listsCurrentCmd = &cobra.Command{
+	Use:   "current",
+	Short: "Returns a current list",
+	Run: func(cmd *cobra.Command, args []string) {
+		currentList := list.GetCurrentList()
+		if currentList == nil {
+			fmt.Println("You have no current list")
+			return
+		}
+		fmt.Printf("You are on \"%s\" list with ID %d", currentList.Name, currentList.ID)
+	},
+}
+
 var listsCreateCmd = &cobra.Command{
 	Use:   "create",
 	Short: "Create a new list",

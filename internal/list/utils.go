@@ -9,6 +9,27 @@ import (
 	"strings"
 )
 
+func GetCurrentList() *List {
+	currentList := config.GetCurrentList()
+	if currentList == -1 {
+		return nil
+	}
+
+	lists := GetLists()
+	if len(lists) == 0 {
+		return nil
+	}
+
+	var list List
+	for _, l := range lists {
+		if l.ID == currentList {
+			list = l
+		}
+	}
+
+	return &list
+}
+
 func CreateList(name string) int {
 	file, err := os.OpenFile(listStorageFilename, os.O_APPEND|os.O_WRONLY, os.ModeAppend)
 	if err != nil {

@@ -19,6 +19,7 @@ func Execute() {
 	config.LoadConfig()
 
 	listCmd.AddCommand(listsLsCmd)
+	listCmd.AddCommand(listsCurrentCmd)
 	listCmd.AddCommand(listsCreateCmd)
 	listCmd.AddCommand(listsCheckoutCmd)
 	listCmd.AddCommand(listsRemoveCmd)
