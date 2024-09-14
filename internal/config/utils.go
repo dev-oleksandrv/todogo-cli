@@ -11,7 +11,7 @@ const (
 	currentListKey = "current_list"
 	listIDKey = "list_id"
 	taskIDKey = "task_id"
-)
+) 
 
 func LoadConfig() {
 	viper.SetConfigFile("config.yml")

@@ -26,9 +26,7 @@ todogo version
 Use the `list add` command to create a new to-do list:
 
 ```bash
-todogo list add "My List"
-# or the shorthand version:
-todogo list a "My List"
+todogo list create "My List"
 ```
 
 #### Switch Between Lists
@@ -45,8 +43,6 @@ To remove a list and all its associated to-dos, use the `list rm` command with t
 
 ```bash
 todogo list rm 3
-# or the shorthand version:
-todogo list r 3
 ```
 
 #### List All Lists

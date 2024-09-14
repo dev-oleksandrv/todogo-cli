@@ -8,7 +8,7 @@ import (
 
 const (
 	listStorageFilename = "lists.csv"
-)
+) 
 
 func CreateListStorageFile() {
 	if _, err := os.Stat(listStorageFilename); os.IsNotExist(err) {
